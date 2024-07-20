@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1715697955158,
+      "tag": "0000_stormy_luminals",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1715705516264,
+      "tag": "0001_optimal_xorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1716655268251,
+      "tag": "0002_sleepy_squadron_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1716713912158,
+      "tag": "0003_rapid_wasp",
+      "breakpoints": true
+    }
+  ]
+}
