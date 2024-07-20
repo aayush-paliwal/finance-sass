@@ -111,11 +111,7 @@ const app = new Hono()
             if(!data){
                 return c.json({ error: "Not found" }, 404);
             }
-            // console.log({ ...data, amount: convertAmountFromMiliunits(data.amount) })
-            // console.log({ data })
-            const res = { data: { ...data, amount: convertAmountFromMiliunits(data.amount)} }
-            return c.json(res);
-            // return c.json({ data });
+            return c.json({ data });
         }
     )
     .post(
