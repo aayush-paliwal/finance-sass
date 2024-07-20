@@ -13,7 +13,6 @@ import {
     categories, 
     accounts
 } from "@/db/schema";
-import { convertAmountFromMiliunits } from "@/lib/utils";
 
 const app = new Hono()
     .get(

@@ -166,7 +166,7 @@ const app = new Hono()
             );
 
             return c.json({
-                date: {
+                data: {
                     remainingAmount: currentPeriod.remaining,
                     remainingChange,
                     incomeAmount: currentPeriod.income,
