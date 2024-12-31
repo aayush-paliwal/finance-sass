@@ -194,6 +194,8 @@ const app = new Hono()
                   )),
             )
 
+            console.log("Trans to del: ", transactionsToDelete);
+
             const data = await db
                 .with(transactionsToDelete)
                 .delete(transactions)

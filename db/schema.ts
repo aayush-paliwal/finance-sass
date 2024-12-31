@@ -50,7 +50,7 @@ export const transactions = pgTable("transactions", {
 export const transactionsRelation = relations(transactions, ({ one }) => ({
     account: one(accounts, {
         fields: [transactions.accountId],
-        references: [accounts.id],
+        references: [accounts.id],N
     }),
     categories: one(categories, {
         fields: [transactions.accountId],
