@@ -1,8 +1,6 @@
 import { IconType } from "react-icons";
 import { VariantProps, cva } from "class-variance-authority";
 
-import { Skeleton } from "@/components/ui/skeleton";
-import { cn, formatCurrency, formatPercentage } from "@/lib/utils";
 import { 
     Card,
     CardContent,
@@ -10,7 +8,10 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { CountUp } from "@/components/count-up";
+
+import { cn, formatCurrency, formatPercentage } from "@/lib/utils";
 
 
 const boxVariant = cva(

@@ -1,7 +1,9 @@
-import React from 'react'
-import { Button } from './ui/button'
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
+import React from 'react';
+import Link from 'next/link';
+
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+
 
 type Props = {
     href: string,

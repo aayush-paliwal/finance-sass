@@ -7,7 +7,6 @@ import {
     CardHeader, 
     CardTitle 
 } from "@/components/ui/card";
-
 import {
     Select, 
     SelectTrigger,
@@ -15,10 +14,11 @@ import {
     SelectValue,
     SelectItem
 } from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
+
 import { PieVariant } from "@/components/pie-variant";
 import { RadarVariant } from "@/components/radar-variant";
 import { RadialVariant } from "@/components/radial-variant";
-import { Skeleton } from "@/components/ui/skeleton";
  
 
 type Props = {

@@ -1,7 +1,8 @@
 "use client";
 
-import { useUser } from '@clerk/nextjs'
-import React from 'react'
+import React from 'react';
+import { useUser } from '@clerk/nextjs';
+
 
 export const WelcomeMsg = () => {
     const { user, isLoaded } = useUser();

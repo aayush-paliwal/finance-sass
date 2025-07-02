@@ -7,6 +7,7 @@ import {
     ResponsiveContainer
 } from "recharts";
 
+
 type Props = {
     data?: {
         name: string;

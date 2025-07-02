@@ -7,7 +7,8 @@ import {
     Line,
     CartesianGrid,
 } from "recharts";
-import { CustomTooltip } from "./custom-tooltip";
+
+import { CustomTooltip } from "@/components/custom-tooltip";
 
 
 type Props = {
