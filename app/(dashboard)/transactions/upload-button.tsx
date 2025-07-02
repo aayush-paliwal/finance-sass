@@ -1,4 +1,4 @@
-import { Upload, UploadIcon } from "lucide-react";
+import { Upload } from "lucide-react";
 import { useCSVReader } from "react-papaparse";
 
 import { Button } from "@/components/ui/button";

@@ -8,6 +8,7 @@ import { clerkMiddleware, getAuth } from '@hono/clerk-auth';
 import { db } from "@/db/drizzle";
 import { categories, insertCategorySchema } from "@/db/schema";
 
+
 const app = new Hono()
     .get(
         "/", 
@@ -15,7 +16,7 @@ const app = new Hono()
         async (c) => {
             const auth = getAuth(c);
             if (!auth?.userId) {
-                return c.json({ message: 'You are not logged in.'}, 401)
+                return c.json({ error: "Unauthorized" }, 401)
             }
             const data = await db
                 .select({
@@ -24,6 +25,7 @@ const app = new Hono()
                 })
                 .from(categories)
                 .where(eq(categories.userId, auth.userId))
+
             return c.json({ data });
     })
     .get(
@@ -61,6 +63,7 @@ const app = new Hono()
             if(!data){
                 return c.json({ error: "Not found" }, 404);
             }
+            
             return c.json({ data });
         }
     )

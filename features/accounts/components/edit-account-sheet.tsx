@@ -4,7 +4,6 @@ import { Loader2 } from "lucide-react";
 import { useGetAccount } from "../api/use-get-account";
 import { AccountForm } from "./account-form";
 import { useOpenAccount } from "../hooks/use-open-account";
-// import { useCreateAccount } from "../api/use-create-account";
 import { useEditAccount } from "../api/use-edit-account";
 import { useDeleteAccount } from "../api/use-delete-account";
 
@@ -33,7 +32,6 @@ export const EditAccountSheet = () => {
 
     const accountQuery = useGetAccount(id);
     const editMutation = useEditAccount(id);
-    // const mutation = useCreateAccount();      To remove from here
     const deleteMutation = useDeleteAccount(id);
 
     const isPending = 
@@ -43,7 +41,6 @@ export const EditAccountSheet = () => {
     const isLoading = accountQuery.isLoading;
 
     const onSubmit = (values: FormValues) => {
-        // mutation.mutate(values, {
         editMutation.mutate(values, {
             onSuccess: () => {
                 onClose();
@@ -93,7 +90,6 @@ export const EditAccountSheet = () => {
                         <AccountForm 
                             id={id}
                             onSubmit={onSubmit}
-                            // disabled={mutation.isPending}
                             disabled={isPending}
                             defaultValues={defaultValues}
                             onDelete={onDelete}

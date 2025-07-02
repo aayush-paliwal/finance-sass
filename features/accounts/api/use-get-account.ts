@@ -1,5 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
 import { client } from "@/lib/hono";
+
+import { useQuery } from "@tanstack/react-query";
+
 
 export const useGetAccount = (id?: string) => {
     const query = useQuery({
@@ -10,7 +12,6 @@ export const useGetAccount = (id?: string) => {
                 param: { id },
             });
 
-            // We can't use try/catch here because it's not axios, so we separately need to handle the error.
             if(!response.ok){
                 throw new Error("Failed to fetch account");
             }

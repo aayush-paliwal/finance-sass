@@ -1,10 +1,10 @@
 import { z } from "zod";
 import { Hono } from "hono";
 import { subDays, parse } from "date-fns";
-import { and, eq, gte, lte, inArray, desc, sql } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";
 import { zValidator } from "@hono/zod-validator";
 import { clerkMiddleware, getAuth } from '@hono/clerk-auth';
+import { and, eq, gte, lte, inArray, desc, sql } from "drizzle-orm";
 
 import { db } from "@/db/drizzle";
 import { 
@@ -13,6 +13,7 @@ import {
     categories, 
     accounts
 } from "@/db/schema";
+
 
 const app = new Hono()
     .get(
@@ -110,6 +111,7 @@ const app = new Hono()
             if(!data){
                 return c.json({ error: "Not found" }, 404);
             }
+
             return c.json({ data });
         }
     )
@@ -192,9 +194,7 @@ const app = new Hono()
                     inArray(transactions.id, values.ids),
                     eq(accounts.userId, auth.userId),
                   )),
-            )
-
-            console.log("Trans to del: ", transactionsToDelete);
+            )   
 
             const data = await db
                 .with(transactionsToDelete)
@@ -206,7 +206,6 @@ const app = new Hono()
                     id: transactions.id,
                 });
                 
-            
             return c.json({ data });
         }
     )

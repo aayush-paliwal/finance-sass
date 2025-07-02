@@ -25,8 +25,8 @@ export const Actions = ({ id }: Props) => {
         "You are about to delete this category."
     );
 
-    const deleteMutation = useDeleteCategory(id);
     const { onOpen } = useOpenCategory();
+    const deleteMutation = useDeleteCategory(id);
 
     const handleDelete = async () => {
         const ok = await confirm();

@@ -1,12 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
 import { client } from "@/lib/hono";
+
+import { useQuery } from "@tanstack/react-query";
+
 
 export const useGetAccounts = () => {
     const query = useQuery({
         queryKey: ["accounts"],
         queryFn: async () => {
             const response = await client.api.accounts.$get();
-            console.log("GET accounts: ", response);
 
             // We can't use try/catch here because it's not axios, so we separately need to handle the error.
             if(!response.ok){
@@ -14,7 +15,6 @@ export const useGetAccounts = () => {
             }
 
             const { data } = await response.json();
-            console.log("Accounts data: ", data)
             return data;
         }
     });

@@ -36,9 +36,8 @@ export const Navigation = () => {
 
     const router = useRouter();
     const pathname = usePathname();
-    const isMobile = useMedia("(max-media: 1024px)", false);
+    const isMobile = useMedia("(max-width: 1024px)", false);
 
-    console.log({isMobile})
 
     const onClick = (href: string) => {
         router.push(href);
@@ -54,8 +53,7 @@ export const Navigation = () => {
                         size="sm"
                         className='font-normal bg-white/10 hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white focus:bg-white/30 transition'
                     >
-                        {/* <Menu className='size-36' /> */}
-                        <h2 className='text-2xl'>Logo</h2>
+                        <Menu />
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className='px-2'>

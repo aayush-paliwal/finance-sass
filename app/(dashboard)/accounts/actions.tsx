@@ -15,6 +15,7 @@ import {
     DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
 
+
 type Props = {
     id: string;
 };
@@ -25,8 +26,8 @@ export const Actions = ({ id }: Props) => {
         "You are about to delete this account."
     );
 
-    const deleteMutation = useDeleteAccount(id);
     const { onOpen } = useOpenAccount();
+    const deleteMutation = useDeleteAccount(id);
 
     const handleDelete = async () => {
         const ok = await confirm();

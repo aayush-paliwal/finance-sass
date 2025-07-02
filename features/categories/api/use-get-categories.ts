@@ -6,7 +6,6 @@ export const useGetCategories = () => {
         queryKey: ["categories"],
         queryFn: async () => {
             const response = await client.api.categories.$get();
-            console.log("Get categories: ", response);
 
             // We can't use try/catch here because it's not axios, so we separately need to handle the error.
             if(!response.ok){
