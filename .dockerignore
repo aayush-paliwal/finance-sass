@@ -1,0 +1,47 @@
+# Build output
+.next
+dist
+build
+
+# Node modules (should be reinstalled inside image)
+node_modules
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Logs
+*.log
+npm-debug.log*
+
+# Git-related
+.git
+.gitignore
+
+# OS/System files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode
+.idea
+
+# Docker-related
+Dockerfile
+.dockerignore
+
+# Tests and coverage
+__tests__
+coverage
+*.test.ts
+*.spec.ts
+jest.config.js
+
+# Docs and markdown
+README.md
+*.md
+Scripts
+drizzle

@@ -7,7 +7,6 @@ import { relations } from "drizzle-orm";
 export const accounts = pgTable("accounts", {
     // Here, "id" is name for the field. This is how it will look in the database
     id: text("id").primaryKey(),
-    plaidId: text("plaid_id"),
     name: text("name").notNull(),
     userId: text("user_id").notNull(),
 });
@@ -21,7 +20,6 @@ export const insertAccountSchema = createInsertSchema(accounts);
 
 export const categories = pgTable("categories", {
     id: text("id").primaryKey(),
-    plaidId: text("plaid_id"),
     name: text("name").notNull(),
     userId: text("user_id").notNull(),
 });
